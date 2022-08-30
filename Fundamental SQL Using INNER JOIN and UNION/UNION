@@ -1,0 +1,22 @@
+#Tabel yang Akan Digabungkan
+SELECT * FROM tabel_A;
+SELECT * FROM tabel_B;
+
+#Menggunakan UNION
+SELECT * FROM tabel_A
+UNION
+SELECT * FROM tabel_B;
+
+#Menggunakan UNION dengan Klausa WHERE
+SELECT * FROM tabel_A
+WHERE kode_pelanggan = 'dqlabcust03'
+UNION
+SELECT * FROM tabel_B
+WHERE kode_pelanggan = 'dqlabcust03';
+
+#Menggunakan UNION dan Menyelaraskan Kolom-Kolomnya.
+SELECT CustomerName, ContactName, City, PostalCode
+FROM Customers
+UNION
+SELECT SupplierName, ContactName, City, PostalCode
+FROM Suppliers;
