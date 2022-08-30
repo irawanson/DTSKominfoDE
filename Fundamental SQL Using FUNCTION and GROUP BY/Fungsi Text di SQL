@@ -1,0 +1,23 @@
+#Fungsi Text - CONCAT( )
+SELECT StudentID, CONCAT(FirstName, LastName) as Name, Semester1, Semester2, MarkGrowth
+FROM students;
+
+#Fungsi Text - SUBSTRING_INDEX( )
+SELECT StudentID, SUBSTRING_INDEX(Email,'@',1) as Name
+FROM students;
+
+#Fungsi Text - SUBSTR( )
+SELECT StudentID, SUBSTR(FirstName, 2, 3) as Initial
+FROM students;
+
+#Fungsi Text - LENGTH( )
+SELECT StudentID, FirstName, LENGTH(FirstName) as Total_Char
+FROM students;
+
+#Fungsi Text - REPLACE( )
+SELECT StudentID, Email, REPLACE(Email, 'yahoo', 'gmail') as New_Email
+FROM students;
+
+#Tugas Praktek
+SELECT StudentID, UPPER(FirstName) as FirstName, LOWER(LastName) as LastName
+FROM students;
